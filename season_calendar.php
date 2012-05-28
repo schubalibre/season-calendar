@@ -2,9 +2,9 @@
 
 $start = mktime(0,0,0,1,1,2012); // start date
 $end = mktime(23,59,59,12,30,2012) + 1; // end date
-$rows = 7; // how much days per line
-$month = 0; // ​​counter of months
-$r = 0; // ​​counter of days
+$rows = 7; // days per line
+$month = 0; // counter of months
+$r = 0; // counter of days
 
 ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@ $r = 0; // ​​counter of days
 
 			for ($i = $start; $i <= $end; $i += 86400){
 
-				// Start the new month
+				// starts the new month
 				if($month != date('m',$i )){
 					
 					$month = date('m',$i );
@@ -42,15 +42,15 @@ $r = 0; // ​​counter of days
 							<thead>
 								<tr>
 									<th colspan='$rows'>".date('F',$i )."</th>
-								</tr> "; // the name of the month
+								</tr> "; // name of month
 					
-					echo "<tr>"; // open the box
+					echo "<tr>"; // opens the box
 					
 					$current_day = date('N',$i) - 1; // current day
 					$start_day = $i - ($current_day * 86400); // Monday
 					$end_day = $i + (($rows - $current_day) * 86400); // Sunday
 
-					// the name of the day
+					// name of day
 					for ($n = $start_day; $n < $end_day; $n += 86400){
 						echo "<th>".date('D',$n )."</th>";
 					}
@@ -60,7 +60,7 @@ $r = 0; // ​​counter of days
 					
 
 					echo "<tbody><tr>";
-					// los dias del del ultimo mes
+					// last days of previous month
 					for ($n = $start_day; $n < $i; $n += 86400){
 						echo "<td id='".date('Y-m-d',$n )."' class='prev_month'>".date('d',$n )."</td>";
 						$r++;
