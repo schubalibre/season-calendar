@@ -1,1 +1,12 @@
-Hello World!
+season-calendar
+============
+
+The idea of ​​the Season Calendar is to develop a calendar that allows visually selecting space of time.
+He has been tested with PHP 5.3 and jQuery 1.4.
+
+
+
+2012-05-28 - 1.0-alpha-1
+ - Initial Release
+ 
+
