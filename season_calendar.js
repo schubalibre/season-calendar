@@ -6,7 +6,7 @@ $(function() {
 			init: function (config){
 				
 				
-				// that are selectables fields
+				// these are the selectable fields
 				this.selectable = config.selectable;
 				
 				// callback function
@@ -20,7 +20,7 @@ $(function() {
 				
 			},
 	
-			// function that control clicks and initiate the first and last day
+			// function that controls clicks and initiates the first and the last day
 			_click: function(){
 				
 				var self = this;
@@ -83,7 +83,7 @@ $(function() {
 	
 			},
 			
-			// prepare the object data with the first day, the last day, all the season and return it
+			// prepares the object data with the first day, the last day, the comlete period and returns it
 			_prepData : function(){
 
 				var start =  this.selectable.index(this.first);
@@ -119,12 +119,12 @@ $(function() {
 			}
 	}
 
-	// call the function season_calendar and initiate all values
+	// calls the function season_calendar and initiates all values
 	season_calendar.init({
 		'selectable' : $('.selectable'),
 		'onSelect' : function(data){
 
-			// returns an obj with the first day (data.first), the last day (data.last) and season (data.temp)
+			// returns an object with the first day (data.first), the last day (data.last) and the period (data.temp)
 			
 			var cnt = $('#dateBox p').length;
 
