@@ -1,0 +1,50 @@
+#warper{
+	width:1000px;
+	margin:20px auto;	
+}
+
+div.month{
+	float: left;
+	margin:10px 10px;
+	height:220px;
+}
+
+table{
+	font-size: 0.8em;
+}
+
+
+table tr td{
+	border:1px solid #f0f0f0;
+	text-align: center; 
+	padding:5px;
+}
+
+.selectable{
+	cursor: pointer;
+}
+
+.green{
+	background-color: green;
+	color:white;
+}
+
+.active{
+	background-color: #666;
+	color:white;
+}
+
+.first{
+	background-color: black;
+	color:white;
+}
+
+.last{
+	background-color: red;
+	color:white;
+}
+
+table tr td.prev_month{
+	color:#999;
+}
+
